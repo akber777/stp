@@ -1,0 +1,69 @@
+//= template/head.html
+<div class="myForm">
+    <div class="container">
+        <div class="row">
+            <div class="form-group col-md-6 col-sm-6">
+                <div class="form-group field-cvsend-full_name required">
+
+                    <input type="text" id="cvsend-full_name" class="form-control" name="CvSend[full_name]"
+                        placeholder="Ad, Soyad" aria-required="true">
+
+                    <div class="help-block"></div>
+                </div>
+            </div>
+            <div class="form-group col-md-6 col-sm-6">
+                <div class="form-group field-file-7">
+                    <input type="hidden" name="CvSend[cvFile]" value=""><input type="file" id="file-7"
+                        class="inputfile inputfile-6" name="CvSend[cvFile]" maxlength=""
+                        data-multiple-caption="{count} files selected">
+
+                    <div class="help-block"></div>
+                    <label class="cv-file" for="file-7"><span></span> <strong> CV</strong><i class="fa fa-file icon"
+                            aria-hidden="true"></i></label>
+                </div>
+                <!--  <label for="file-7" class="cv-file"><span id="filetext"></span> <strong> CV</strong></label>  -->
+            </div>
+            <div class="form-group col-md-6 col-sm-6">
+                <div class="form-group field-cvsend-email required">
+
+                    <input type="text" id="cvsend-email" class="form-control" name="CvSend[email]" placeholder="E-mail"
+                        aria-required="true">
+
+                    <div class="help-block"></div>
+                </div>
+            </div>
+            <div class="form-group col-md-6 col-sm-6">
+                <div class="form-group field-cvsend-cv_subject required">
+
+                    <input type="text" id="cvsend-cv_subject" class="form-control" name="CvSend[cv_subject]"
+                        placeholder="Mövzu" aria-required="true">
+
+                    <div class="help-block"></div>
+                </div>
+                <div class="form-group field-cvsend-vacancy required">
+
+                    <input type="hidden" id="cvsend-vacancy" class="form-control" name="CvSend[vacancy]" value="28">
+
+                    <div class="help-block"></div>
+                </div>
+            </div>
+            <div class="form-group col-md-12 col-sm-12">
+                <div class="form-group field-cvsend-cv_text">
+
+                    <textarea id="cvsend-cv_text" class="form-control" name="CvSend[cv_text]"
+                        placeholder="Mətn"></textarea>
+
+                    <div class="help-block"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-12 col-sm-12 send">
+            <div class="new-vacansies">
+                <a> <button class="btn btn-primary new">Göndər</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+//= template/footer.html
