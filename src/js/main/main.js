@@ -1,34 +1,21 @@
-class Gulp {
-    constructor(name) {
-        return this.name = name;
+
+
+document.querySelectorAll('.dropdown-list__item-label').forEach(item => {
+
+    item.onclick = function () {
+
+        if (item.parentElement.classList.contains('dropdown-list__item--expanded') === false) {
+            item.parentElement.classList.add('dropdown-list__item--expanded')
+            item.children[0].style.display = 'none'
+            item.children[1].style.display = 'block'
+        }
+
+        else {
+            item.parentElement.classList.remove('dropdown-list__item--expanded')
+            item.children[0].style.display = 'block'
+            item.children[1].style.display = 'none'
+        }
+
     }
-
-    static gulp = () => {
-
-        return 'GULP';
-    }
-
-}
-
-Gulp.gulp()
-
-
-
-let info = {
-    name: 'Akber',
-    lastName: 'Akhmedzadeh',
-    age: '23'
-}
-
-
-let split = [{ ...info }].map(item => {
-
-    console.log(item)
 
 })
-
-// gulpOptions sperated operator olmadan map olunmuyacaqdi sepereted opereator vasitesiyle biz rahatliqla json objecti map ede bileriy ve yaxudda {gulpOptions} bele
-
-// butun jsler babel vasitesiyle convert edilir
-
-// bu dosya ve bu dosyada yazilan butun jsler test ucundur js dosyasinda olan butun elementleri sile biler ozunuz istedyiniz yeni js fayllarini yarada bilersiniz

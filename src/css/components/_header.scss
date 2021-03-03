@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     align-items: center;
     min-height: 90vh;
-    padding: var(--padding);
+    padding: 10px;
     padding-top: 76px;
     position: relative;
     background-size: cover;
@@ -24,7 +24,7 @@
 }
 
 .microsite-stage__background-wrapper {
-    position: absolute;
+    position: relative;
     z-index: -1;
     overflow: hidden;
     height: 100%;

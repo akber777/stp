@@ -23,9 +23,9 @@ let paths = require('path');
 let path = {
     build: { //Burada işlemden sonra bitmiş dosyaların nereye koyulacağını gösteriyoruz
         html: 'build/',
-        js: 'build/js/',
+        js: '../../../backend/S/stp-internship/themes/stp-internship/assets/js/',
         vendor: 'build/js/vendor/', //src deki vendor klasörünü buildeki vendor klasörüne eklemek için
-        css: 'build/css/main/',
+        css: '../../../backend/S/stp-internship/themes/stp-internship/assets/css/main/',
         images: 'build/img/',
         fonts: 'build/fonts/',
         libs: 'build/libs/' //bower ile src klasörüne yüklediğim dosyaları build klasörüne eklemek için
@@ -206,26 +206,26 @@ gulp.task('watch', function () {
         }),
 
         gulp.watch([path.watch.fonts], gulp.series('fonts:build')).on('change', browserSync.reload).on('unlink', function (filepath) {
-            
-            
+
+
             let filePathFromSrc = paths.relative(paths.resolve('src'), filepath) // html faylarinin silinib silinmediyi src icinde kontrol edilir
 
-            let endPath=paths.basename(filePathFromSrc)
+            let endPath = paths.basename(filePathFromSrc)
 
             let destFilePath = paths.resolve('build/fonts/', endPath);
-            
+
             del.sync(destFilePath);
 
         }),
 
         gulp.watch([path.watch.libs], gulp.series('libs:build')).on('change', browserSync.reload).on('unlink', function (filepath) {
 
-            let nameDir=paths.dirname(filepath)
+            let nameDir = paths.dirname(filepath)
 
             let filePathFromSrc = paths.relative(paths.resolve('src'), nameDir) // html faylarinin silinib silinmediyi src icinde kontrol edilir
-            
+
             let destFilePath = paths.resolve('build', filePathFromSrc);
-            
+
             del.sync(destFilePath);
 
         }),
